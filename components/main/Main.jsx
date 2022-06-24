@@ -19,8 +19,8 @@ const options = {
 const style ={
     wrapper: `h-screen z-40`,
     container: `flex m-5  p-5 flex-col`,
-    text_container: `z-10 ml-4 m-12 p-4 lg:w-1/2 w-full`,
-    h1: `text-3xl my-2  font-bold  lg:text-7xl md:text-5xl`,
+    text_container: `z-10 ml-4 m-12 p-4 xl:w-1/2 w-full`,
+    h1: `text-3xl my-2 xs:text-red-300 font-bold  lg:text-7xl md:text-5xl`,
     name: `text-orange-500 font-bold`,
     p:`py-3  sm:text-2xl text-xl font-bold lg:text-4xl`,
     p_span: `text-yellow-500 sm:text-2xl  neon-button typing-text`,

@@ -6,21 +6,17 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'sm': '640px',
-        // => @media (min-width: 640px) { ... }
+        xs: {max : "640px"},
+
+        sm: {min:"640px", max: "767px"},
   
-        'md': '768px',
-        // => @media (min-width: 768px) { ... }
+        // md: {min:"768px" , max:"1024px"},
   
-        'lg': '1024px',
-        // => @media (min-width: 1024px) { ... }
+        // lg: {min:"1024px",max : "1279px"},
   
-        'xl': '1280px',
-        // => @media (min-width: 1280px) { ... }
-  
-        '2xl': '1536px',
-        // => @media (min-width: 1536px) { ... }
+        // xl: {min:"1280px"},
       },
+
       colors: {
         'body': '#17171F',
         'selected-text': '#A3A3FF',
@@ -29,10 +25,11 @@ module.exports = {
         'secondary': '#9191A4',
         'badge': '#3F3F51',
         'input-border': '#565666',
-        'input': '#2A2A35'
+        input: '#2A2A35'
       },
+
       fontFamily: {
-        'poppins': ["'Poppins'", 'sans-serif']
+        poppins: ["'Poppins'", 'sans-serif']
       }
     },
     

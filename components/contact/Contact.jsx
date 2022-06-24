@@ -25,6 +25,7 @@ const Contact = () => {
           <a href="tel:+5531981213843">Phone: <span className={style.span}>07020096</span></a>
         </div>
       </div>
+      
     </div>
   )
 }
