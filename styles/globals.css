@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.neon-button{
+  /* font-size: 50px; */
+  font-family: 'Megrim', cursive;
+  text-shadow: 
+        0 0 5px #0bf4f3,
+        0 0 10px #0bf4f3,
+        0 0 20px #0bf4f3,
+        0 0 40px #0bf4f3,
+        0 0 80px #0bf4f3;
+}
+
+.white-glassmorphism{
+  background: radial-gradient(100% 416.44% at 0% 5.25%, rgba(255, 249, 249, 0.444) 0%, rgba(255, 255, 255, 0.06) 100%);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.blue-glassmorphism{
+  background:rgb(39, 51, 89,0.6);
+  border-radius:16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border:1px solid rgba(0,0,0,0.4)
+}
+
+#particles-js{
+    position: absolute;
+    top: 10;left: 0;
+    height: 100%;
+    width: 100vw;
+}
+.App-particles__container {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 8;
+}
+
+.wave {    /*  waving hand */   
+    -webkit-animation-name: wave-animation;
+            animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;        /* Change to speed up or slow down */
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @-webkit-keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+  }
+  
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.trans{
+  transition: 0.3s;
+}
+
+.trans:hover{
+  transform: translate(5px);
+}
+
+.Btn{
+    color: #fff;
+    border:1px solid rgba(255, 255, 255, 0.555);
+    transition: 0.5s;
+    background: transparent;
+    box-shadow: 0px 5px 18px rgba(231, 231, 236, 0.404);
+    font-family: 'Nunito', sans-serif;
+}
+
+.LinkIned:hover,#LinkIned:hover{
+        color:blue;
+        background-color: #fff;
+}
+
+.Github:hover,#Github:hover{
+        color:black;
+        background-color: #fff;
+}
+.WatApp:hover,
+#WatApp:hover{
+        color:#fff;
+        background-color: #1ae513;;     
+}
+
+.Twitter:hover,#Twitter:hover{
+        color:#fff;
+        background-color: #138de5;;     
+}
+
+@property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+}
+
+:root {
+        --card-height:70vh ;
+        --card-width: calc(var(--card-height) / 1.5);
+}
+.card {
+        background: #191c29;
+        padding: 1rem;
+        position: relative;
+        border-radius: 6px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        font-family: cursive; 
+}
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -2;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+.card::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--card-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -2;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--card-height) / 6));
+        background-image: linear-gradient(
+          var(--rotate)
+          , #5ddcff, #3c67e3 43%, #4e00c2);
+          opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+      }
+      
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  @media(min-width:900px){
+    :root {
+        --card-height: 70vh;
+    }
+    
+  }
+
+.btnCustom{
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  border:1px white solid;
+  padding: 15px 35px;
+  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+  text-decoration: none;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btnCustom:hover{
+    background: linear-gradient(
+      var(--rotate),#5ddcff,#3c67e3, #4e00c2);   
+}
+
+.btnCustom:active {
+  top: 2px;
+}
+
+
+.custom-btn {
+  color: #fff;
+  
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-16 {
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff inset;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+ box-shadow: rgba(255,255,255, 1) -1px -1px,  -2px -2px, rgba(255,255,255, 1) -3px -3px, rgba(255,255,255, .9) -4px -4px,
+   rgba(255,255,255,.8) -5px -5px, rgba(255,255,255,.7) -6px -6px, rgba(255,255,255,.6) -7px -7px, rgba(255,255,255,.5) -8px -8px,
+      rgba(255,255,255,.4) -9px -9px, rgba(255,255,255,.3) -10px -10px, rgba(255,255,255,.2) -11px -11px, rgba(255,255,255,.1) -12px -12px;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}
+
+.glass{
+    
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    background: radial-gradient(100% 416.44% at 0% 5.25%, rgba(255, 249, 249, 0.444) 0%, rgba(255, 255, 255, 0.06) 100%);
+    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  /* Note: backdrop-filter has minimal browser support */
+    border-radius: 9px;
+    /* transform: translate(180px); */
+    overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  object-fit:contain;
+  display: block;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.span-text{
+  display:inline;
+}
+
+@media(max-width:800px){
+  .span-text {
+      display: none;
+  }
+}
+
+
+@font-face {
+  font-family: 'neontubes';
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+.main {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50vw;
+  height: auto;
+  font-family: "neontubes";
+  font-size: 16vw;
+  text-align: center;
+  white-space: nowrap;
+}
+.main span {
+  display: block;
+  position: relative;
+  -webkit-transform: translateZ(0) translate3D(0, 0, 0);
+          transform: translateZ(0) translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: opacity;
+}
+.main .webdev {
+  color: #ffd9e2;
+  text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
+  -webkit-animation: blink 4s infinite alternate;
+          animation: blink 4s infinite alternate;
+}
+.main .socod {
+  font-size: 11vw;
+  color: #d4eaff;
+  text-shadow: 0 0 0 transparent, 0 0 10px #2695ff, 0 0 20px rgba(38, 149, 255, 0.5), 0 0 40px #2695ff, 0 0 100px #2695ff, 0 0 200px #2695ff, 0 0 300px #2695ff, 0 0 500px #2695ff;
+  -webkit-animation: buzz 0.01s infinite alternate;
+          animation: buzz 0.01s infinite alternate;
+}
+ 
+@-webkit-keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+ 
+@keyframes buzz {
+  70% {
+    opacity: 0.80;
+  }
+}
+@-webkit-keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    width: 400px;
+    font-size: 150px;
+  }
+ 
+  .main .socod {
+    font-size: 103px;
+  }
+}
