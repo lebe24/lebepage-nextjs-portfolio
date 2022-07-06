@@ -3,7 +3,7 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import icon from '../../assets/icon.svg'
 import Image from 'next/image'
-import logo from '../../assets/lebepage.svg'
+import logo from '../../assets/LEBEPAGE.svg'
 import { Link } from "react-scroll";
  
  

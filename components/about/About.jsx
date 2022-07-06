@@ -1,5 +1,5 @@
 import React from 'react'
-import Cloud from './Cloud/Cloud'
+import Cloud from './cloud/Cloud'
 import Image from 'next/image'
 import person from '../../assets/person.png'
 
